@@ -2,11 +2,41 @@
 
 This repository presents a MATLAB-based case study for processing multi-channel functional near-infrared spectroscopy (fNIRS) recordings from an n-back working-memory experiment.
 
-The analysis converts raw optical intensity recordings into scaled hemoglobin-response estimates, applies motion-artifact attenuation, performs quality-control checks, and compares 1-back, 2-back, and 3-back conditions at participant, block, channel, and group levels.
+The workflow converts raw optical-intensity recordings into scaled hemoglobin-response estimates, applies motion-artifact attenuation, performs quality-control checks, and compares 1-back, 2-back, and 3-back conditions at participant, block, channel, and group levels.
 
-The project is intentionally framed as an **exploratory signal-processing and scientific-computing case study**, not as a validated neuroimaging study.
+The project is framed as an **exploratory signal-processing and scientific-computing case study**, not as a validated neuroimaging study.
 
-![Group HbO by condition and channel](results/figures/enhanced_group_hbo_by_channel.png)
+## At a glance
+
+- **Input:** 45 anonymized fNIRS recordings from 5 participants.
+- **Signals:** 16 measurement channels, each containing 730 nm, ambient, and 850 nm optical-intensity measurements.
+- **Processing:** Optical-density conversion, TDDR-style motion-artifact attenuation, low-pass filtering, baseline re-centering, and MBLL-based scaled HbO/HbR estimation.
+- **Validation checks:** Quality-control metrics, processing-sensitivity analysis, block-level consistency analysis, and leave-one-participant-out influence analysis.
+- **Main result:** The enhanced exploratory analysis did **not** show a statistically reliable global HbO increase from 1-back to 3-back.
+
+## Processing overview
+
+```text
+raw optical intensity
+-> input validation
+-> optical-density conversion
+-> TDDR-style motion-artifact attenuation
+-> 0.20 Hz zero-phase low-pass filtering
+-> baseline re-centering
+-> MBLL-based scaled HbO/HbR estimation
+-> block-, participant-, channel-, and group-level summaries
+-> exploratory statistics and sensitivity analyses
+```
+
+The primary engineering configuration is:
+
+```text
+TDDR-style attenuation + 0.20 Hz low-pass filter
+```
+
+The 0.20 Hz low-pass option was selected after comparing synthetic hemodynamic-signal preservation across no low-pass, 0.05 Hz, 0.10 Hz, and 0.20 Hz settings. The 0.20 Hz setting preserved the synthetic waveform with the lowest distortion among the tested low-pass configurations.
+
+![Synthetic filter preservation](results/figures/enhanced_synthetic_filter_preservation.png)
 
 ## What this project demonstrates
 
@@ -51,7 +81,7 @@ fnirs-hemodynamic-analysis/
 
 ## Data organization
 
-The expected raw input consists of text files with 48 columns:
+The raw input files contain 48 columns:
 
 ```text
 16 channels x [730 nm, ambient, 850 nm] = 48 columns
@@ -77,32 +107,6 @@ data/raw/
 
 The subject numbers `3`, `4`, `5`, `6`, and `8` are anonymized dataset labels. They do not encode participant identity. No personal identifiers, demographic variables, behavioral scores, or acquisition metadata identifying individual participants are included. See `data/README.md` for the file naming pattern and design layout.
 
-## Processing pipeline
-
-The enhanced analysis follows this sequence:
-
-```text
-raw optical intensity
--> input validation
--> optical-density conversion
--> TDDR-style motion-artifact attenuation
--> 0.20 Hz zero-phase low-pass filtering
--> baseline re-centering
--> MBLL-based scaled HbO/HbR estimation
--> block-, participant-, channel-, and group-level summaries
--> exploratory statistics and sensitivity analyses
-```
-
-The primary engineering configuration is:
-
-```text
-TDDR-style attenuation + 0.20 Hz low-pass filter
-```
-
-The 0.20 Hz low-pass option was selected after comparing synthetic hemodynamic-signal preservation across no low-pass, 0.05 Hz, 0.10 Hz, and 0.20 Hz settings. The 0.20 Hz setting preserved the synthetic waveform with the lowest distortion among the tested low-pass configurations.
-
-![Synthetic filter preservation](results/figures/enhanced_synthetic_filter_preservation.png)
-
 ## Main result
 
 The enhanced analysis does **not** support a statistically reliable global HbO increase from 1-back to 3-back in this small dataset.
@@ -120,7 +124,15 @@ The direction of the global 3-back minus 1-back effect changes when Subject 8 is
 
 ![Participant paired HbO](results/figures/enhanced_global_hbo_paired.png)
 
-## Block-level consistency
+## Representative outputs
+
+### Channel-level exploratory HbO estimates
+
+The channel-wise group plot summarizes scaled HbO estimates for 1-back, 2-back, and 3-back conditions across the 16 measurement channels. It is useful as a high-level overview of condition-dependent patterns, but it is not sufficient by itself to support an inferential claim.
+
+![Group HbO by condition and channel](results/figures/enhanced_group_hbo_by_channel.png)
+
+### Block-level consistency
 
 The block-level analysis shows that repeated blocks are not uniformly stable across participants and conditions. This explains why the group-level condition means should be treated as exploratory.
 
@@ -135,7 +147,7 @@ p_median = 0.8125
 
 This suggests that the main interpretation is not simply an artifact of using arithmetic means across repeated blocks.
 
-## Motion-artifact diagnostics
+### Motion-artifact diagnostics
 
 The legacy moving coefficient-of-variation metric was retained as a motion-candidate detector. Representative cases from Subject 3 and Subject 4 show clear candidate artifact periods and the effect of TDDR-style attenuation on optical-density signals.
 
