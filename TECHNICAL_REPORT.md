@@ -123,9 +123,9 @@ The motion-diagnostic heatmap showed elevated candidate fractions in the previou
 
 For each wavelength, optical-density change was computed relative to a baseline segment:
 
-\[
-\Delta OD_\lambda(t) = \log_{10}\left(\frac{I_{\lambda,baseline}}{I_\lambda(t)}\right)
-\]
+```text
+ΔODλ(t) = log10( Iλ,baseline / Iλ(t) )
+```
 
 where \(I_{\lambda,baseline}\) is the mean intensity over the baseline frames.
 
@@ -218,9 +218,9 @@ The global channel-average HbO response is used as the main exploratory summary.
 
 The primary contrast is:
 
-\[
-\Delta HbO_{3-back} - \Delta HbO_{1-back}
-\]
+```text
+ΔHbO(3-back) − ΔHbO(1-back)
+```
 
 at the participant level, using global channel-average HbO.
 
