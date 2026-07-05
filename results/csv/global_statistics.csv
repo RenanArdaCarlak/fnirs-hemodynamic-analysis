@@ -1,0 +1,12 @@
+Metric,MetricValue
+Mean 3-back minus 1-back,0.0198811138486039
+Cohen dz,0.193862139987304
+95% CI lower,-0.0491244387056826
+95% CI upper,0.107926851585707
+Exact paired sign-flip p,0.8125
+Minimum attainable two-sided sign-flip p,0.0625
+Repeated-measures omnibus statistic,0.0022635361707588
+Exact repeated-measures omnibus p,0.451388888888889
+Valid subject count,5
+Leave-one-out direction-change count,1
+Maximum absolute leave-one-out difference shift,0.0416575335435913

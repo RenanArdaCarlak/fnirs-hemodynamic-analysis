@@ -1,0 +1,22 @@
+# MATLAB
+*.asv
+*.m~
+*.mlx
+slprj/
+codegen/
+*.mex*
+*.mat
+!results/csv/fnirs_summary_results.mat
+
+# Large/generated outputs
+results_enhanced*/
+full_workspace*.mat
+fnirs_full_workspace.mat
+
+# Raw participant data are intentionally included in data/raw/ for this repository.
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
