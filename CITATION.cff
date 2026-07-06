@@ -9,11 +9,7 @@ version: "1.0.0"
 date-released: "2026-07-06"
 repository-code: "https://github.com/RenanArdaCarlak/fnirs-hemodynamic-analysis"
 license-url: "https://github.com/RenanArdaCarlak/fnirs-hemodynamic-analysis/blob/main/LICENSE"
-abstract: >-
-  MATLAB-based fNIRS signal-processing case study for multi-channel optical recordings,
-  including optical-density conversion, TDDR-style motion-artifact attenuation,
-  MBLL-based scaled HbO/HbR estimation, quality-control metrics, processing-sensitivity
-  analysis, and exploratory within-subject comparison of n-back working-memory conditions.
+abstract: "MATLAB-based fNIRS signal-processing case study for multi-channel optical recordings, including optical-density conversion, TDDR-style motion-artifact attenuation, MBLL-based scaled HbO/HbR estimation, quality-control metrics, processing-sensitivity analysis, and exploratory within-subject comparison of n-back working-memory conditions."
 keywords:
   - fNIRS
   - MATLAB
