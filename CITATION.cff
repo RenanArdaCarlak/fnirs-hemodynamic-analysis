@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use or refer to this repository, please cite it using the metadata below."
+title: "Multi-Channel fNIRS Hemodynamic Analysis in MATLAB"
+type: software
+authors:
+  - family-names: "Carlak"
+    given-names: "Renan Arda"
+version: "1.0.0"
+date-released: "2026-07-06"
+repository-code: "https://github.com/RenanArdaCarlak/fnirs-hemodynamic-analysis"
+abstract: >-
+  MATLAB-based fNIRS signal-processing case study for multi-channel optical recordings,
+  including optical-density conversion, TDDR-style motion-artifact attenuation,
+  MBLL-based scaled HbO/HbR estimation, quality-control metrics, processing-sensitivity
+  analysis, and exploratory within-subject comparison of n-back working-memory conditions.
+keywords:
+  - fNIRS
+  - MATLAB
+  - signal processing
+  - biomedical signal processing
+  - neuroimaging
+  - motion artifact
+  - Modified Beer-Lambert Law
+  - n-back

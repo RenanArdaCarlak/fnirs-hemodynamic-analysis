@@ -57,6 +57,8 @@ fnirs-hemodynamic-analysis/
 |
 |-- README.md
 |-- TECHNICAL_REPORT.md
+|-- CITATION.cff
+|-- CITATION.md
 |-- LICENSE
 |-- .gitignore
 |
@@ -209,7 +211,29 @@ results/figures/
 | `filter_preservation_test.csv` | Synthetic signal preservation metrics for filter options |
 | `mbll_parameter_audit.csv` | MBLL parameter audit table |
 
-## Suggested citation / portfolio description
+## Citation
+
+A repository-level citation file is provided in `CITATION.cff`, which GitHub can use to generate citation metadata.
+
+**Plain-text citation:**
+
+```text
+Carlak, R. A. (2026). Multi-Channel fNIRS Hemodynamic Analysis in MATLAB (Version 1.0.0) [Computer software]. GitHub. https://github.com/RenanArdaCarlak/fnirs-hemodynamic-analysis
+```
+
+**BibTeX:**
+
+```bibtex
+@software{carlak_fnirs_hemodynamic_analysis_2026,
+  author  = {Carlak, Renan Arda},
+  title   = {Multi-Channel fNIRS Hemodynamic Analysis in MATLAB},
+  year    = {2026},
+  version = {1.0.0},
+  url     = {https://github.com/RenanArdaCarlak/fnirs-hemodynamic-analysis}
+}
+```
+
+## Portfolio description
 
 ```text
 Developed a MATLAB-based fNIRS signal-processing pipeline for multi-channel optical recordings, including optical-density conversion, TDDR-style motion-artifact attenuation, MBLL-based HbO/HbR estimation, quality-control metrics, and exploratory within-subject analysis of n-back working-memory conditions.
