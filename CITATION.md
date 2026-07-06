@@ -18,3 +18,5 @@ Carlak, R. A. (2026). Multi-Channel fNIRS Hemodynamic Analysis in MATLAB (Versio
 }
 ```
 Please cite this repository using the metadata provided in `CITATION.cff`.
+
+Citation does not grant permission to reuse, modify, redistribute, or republish the project. See `LICENSE` for permitted use.
