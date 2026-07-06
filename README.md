@@ -233,6 +233,8 @@ Carlak, R. A. (2026). Multi-Channel fNIRS Hemodynamic Analysis in MATLAB (Versio
 }
 ```
 
+Citation does not grant permission to reuse, modify, redistribute, or republish the project.
+
 ## Portfolio description
 
 ```text
@@ -242,3 +244,9 @@ Developed a MATLAB-based fNIRS signal-processing pipeline for multi-channel opti
 ## License
 
 This repository is provided as a source-available portfolio project. Viewing and local inspection are allowed. Reproduction, redistribution, derivative use, or reuse in another project requires explicit written permission from the author. See `LICENSE`.
+
+## Author
+
+**Renan Arda Carlak**  
+Simulation and Computational Modeling Engineer  
+Biomechanics | MATLAB/Simulink | Signal-processing
