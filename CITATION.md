@@ -17,5 +17,4 @@ Carlak, R. A. (2026). Multi-Channel fNIRS Hemodynamic Analysis in MATLAB (Versio
   url     = {https://github.com/RenanArdaCarlak/fnirs-hemodynamic-analysis}
 }
 ```
-
-GitHub also reads the repository-level `CITATION.cff` file to generate citation metadata automatically.
+Please cite this repository using the metadata provided in `CITATION.cff`.

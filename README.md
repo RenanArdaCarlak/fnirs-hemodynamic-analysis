@@ -213,7 +213,7 @@ results/figures/
 
 ## Citation
 
-A repository-level citation file is provided in `CITATION.cff`, which GitHub can use to generate citation metadata.
+Please cite this repository using the metadata provided in `CITATION.cff`.
 
 **Plain-text citation:**
 
