@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use or refer to this repository, please cite it using the metadata below."
+message: "If you use or refer to this repository, please cite it using the metadata below. Citation does not grant permission to reuse the materials; see LICENSE.md for permitted use."
 title: "Multi-Channel fNIRS Hemodynamic Analysis in MATLAB"
 type: software
 authors:
