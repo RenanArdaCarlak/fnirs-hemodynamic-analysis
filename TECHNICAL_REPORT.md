@@ -367,3 +367,9 @@ Despite the scientific limitations, the project demonstrates several relevant en
 - transparent reporting of non-significant results.
 
 These elements make the project suitable as a portfolio case study in scientific computing, biomedical signal processing, MATLAB-based data analysis, and reproducible research engineering.
+
+---
+
+**Copyright © 2020–2026 Renan Arda Carlak. All rights reserved.**
+
+This report and its associated figures are covered by the repository’s [License](../LICENSE).
