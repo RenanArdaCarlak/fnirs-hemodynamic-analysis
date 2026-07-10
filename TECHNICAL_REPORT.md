@@ -370,6 +370,6 @@ These elements make the project suitable as a portfolio case study in scientific
 
 ---
 
-**Copyright © 2020–2026 Renan Arda Carlak. All rights reserved.**
+**Copyright © 2020-2026 Renan Arda Carlak. All rights reserved.**
 
-This report and its associated figures are covered by the repository’s [License](LICENSE).
+This report and its associated figures are covered by the repository's [License](LICENSE).
