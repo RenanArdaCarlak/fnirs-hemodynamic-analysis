@@ -127,7 +127,7 @@ For each wavelength, optical-density change was computed relative to a baseline 
 ΔODλ(t) = log10( Iλ,baseline / Iλ(t) )
 ```
 
-where \(I_{\lambda,baseline}\) is the mean intensity over the baseline frames.
+where Iλ,baseline is the mean intensity over the baseline frames.
 
 The enhanced version uses a common post-baseline analysis window of 118 samples, corresponding to 59 seconds at 2 Hz. This avoids mixing 118-sample and 119-sample post-baseline windows in summary metrics.
 
